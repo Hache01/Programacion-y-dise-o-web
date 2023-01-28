@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Primera Pagina
+        </title>
+    </head>
+    <body>
+        <!-- Texto de la Clase de Programacion -->
+
+        <h1>Texto de la Clase de Programacion</h1> 
+        <h2>Texto de la Clase de Programacion</h2>
+        <h3>Texto de la Clase de Programacion</h3>
+        <h4>Texto de la Clase de Programacion</h4>
+        <h5>Texto de la Clase de Programacion</h5>
+        <h6>Texto de la Clase de Programacion</h6>
+        <p>Segunda linea?</p>
+
+       <p> <b>No se si es casualidad,</b> <i>que yo me sienta asi</i></p>
+        <p><small>Siempre que tu estas cerquita de mi </small></p>
+        <p><big>Dime que me hiciste que droga me diste</big></p>
+        <p>que desde aquella noche no soy igual</p>
+        <p>tu que me mira y empiezo a sudar</p>
+        <p>Siento que puedo volar</p>
+    </body>
+    <!--html css suport--> <!--live server-->
+</html>
