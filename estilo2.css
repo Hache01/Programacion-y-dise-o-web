@@ -1,0 +1,14 @@
+
+div {
+    font-weight: bold; color: dodgerblue; 
+    background-color: lightgrey;
+    width: 200px;
+    height: 200px;
+    border: solid 5px blue;
+    border-radius: 100px ;
+    color: red ;
+    font-size: 40px;
+    
+}
+
+

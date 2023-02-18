@@ -1,0 +1,23 @@
+h6 {
+    font-size: 30px;
+}
+div {font-weight: bold; color: dodgerblue; 
+    background-color: lightgrey;
+    width: 200px;
+    height: 200px;
+    border: solid 5px blue;
+    border-radius: 100px ;
+    color: red ;
+    font-size: 40px;
+}
+
+
+/* cuando las reglas iniian co un punto corresponden a una clase */
+.color-rojo{ color: red;
+
+}
+
+/* cuando las reglas inician con # corresponde a una clase */
+#letra40{
+    font-size: 40px;
+}
