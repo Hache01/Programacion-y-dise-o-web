@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- Insertar imágenes -->
+
+<!-- Crear formularios -->
+<div>
+<html>
+
+    <head>
+    
+        <title>Clase 7</title>
+
+        <link rel="stylesheet" href="Clase7.css">
+
+    </head>
+
+
+
+    <body>
+    
+        <img id="Foto1" class="edit" src="https://i.scdn.co/image/75416e947bf832f9181500e2da9ebd5feed53d93" alt="">
+        <img id="Foto2" class="edit" src="https://m.media-amazon.com/images/I/51DGnh7QoeL._AC_.jpg" alt="">
+
+        <div>
+            <Form action="">
+                <label class="etiqueta" for="">Nombre</label>
+                <input id="Nombre" class="caja" type="text">
+    
+        </div>
+
+        <div>
+            <Form action="">
+                <label class="" for="">Email</label>
+                <input id="Email" class="caja2" type="text">
+    
+        </div>
+
+        <div>
+            <Form action="">
+                <label for="">Password</label>
+                <input id="Password" class="caja3" type="password">
+    
+        </div>
+
+        <input id="Ocultar" class="boton" type="button" value="Ocultar" onClick="funcion_ocultar()">
+        <input id="Mostrar" class="boton" type="button" value="Mostrar" onClick="funcion_mostrar()">
+        <input id="limpiar" class="boton" type="button" value="Limpiar" onClick="funcion_limpiar()">
+        <input id="llenar" class="boton" type="button" value="llenar" onClick="funcion_llenar()">
+
+
+        </Form>
+        <script>
+            function funcion_limpiar() {
+                var boton_limpiar = document.getElementById("limpiar");
+               // boton_limpiar.style["background-color"] = "red" ;             
+
+               var Nombre = document.getElementById("Nombre")
+               var Email = document.getElementById("Email")
+               var Password = document.getElementById("Password")
+
+               Nombre.value = "";
+               Email.value = "";
+               Password.value = "";
+            }
+
+            function funcion_llenar() {
+                var boton_llenar = document.getElementById("llenar");
+               
+               var Nombre = document.getElementById("Nombre");
+               var Email = document.getElementById("Email");
+               var Password = document.getElementById("Password");
+
+               Nombre.value = "pedro";
+               Email.value = "pedro@gmail.com";
+               Password.value = "123456";
+            }  
+               
+            function funcion_ocultar() {
+                var imagen = document.getElementById("Foto1");
+            
+
+                imagen.style["display"] = "none";
+
+            }
+
+            function funcion_mostrar() {
+                var imagen = document.getElementById("Foto1")
+            
+
+                imagen.style["display"] = "inline" ;
+            }
+        </script>
+    </body>
+
+</div>
+
+</html>

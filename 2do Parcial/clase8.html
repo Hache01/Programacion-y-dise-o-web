@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!-- Insertar imágenes -->
+
+<!-- Crear formularios -->
+<div>
+<html>
+
+    <head>
+    
+        <title>Clase 8</title>
+
+        <link rel="stylesheet" href="Clase8.css">
+
+    </head>
+
+
+
+    <body>
+    
+        <img id="Foto1" class="edit" src="https://i.scdn.co/image/75416e947bf832f9181500e2da9ebd5feed53d93" alt="">
+      
+        <br>
+        <input id="Ocultar" class="boton" type="button" value="Ocultar" onClick="funcion_Ocultar()">
+        <input id="Mostrar" class="boton" type="button" value="Mostrar" onClick="funcion_Mostrar()">
+
+     
+
+        <div>
+            <Form action="">
+                <label class="etiqueta" for="">Nombre</label>
+                <input id="Nombre" class="caja" type="text">
+    
+        </div>
+
+        <div>
+            <Form action="">
+                <label class="" for="">Email</label>
+                <input id="Email" class="caja2" type="text">
+    
+        </div>
+
+        <div>
+            <Form action="">
+                <label for="">Password</label>
+                <input id="Password" class="caja3" type="password">
+    
+        </div>
+
+            <input id="limpiar" class="boton" type="button" value="Limpiar" onClick="funcion_limpiar()">
+            <input id="llenar" class="boton" type="button" value="llenar" onClick="funcion_llenar()">
+
+
+        </Form>
+        <script>
+            function funcion_limpiar() {
+                var boton_limpiar = document.getElementById("limpiar");
+               // boton_limpiar.style["background-color"] = "red" ;             
+
+               var Nombre = document.getElementById("Nombre")
+               var Email = document.getElementById("Email")
+               var Password = document.getElementById("Password")
+
+               Nombre.value = "";
+               Email.value = "";
+               Password.value = "";
+            }
+
+            function funcion_llenar() {
+                var boton_llenar = document.getElementById("llenar");
+               
+               var Nombre = document.getElementById("Nombre");
+               var Email = document.getElementById("Email");
+               var Password = document.getElementById("Password");
+
+               Nombre.value = "pedro";
+               Email.value = "pedro@gmail.com";
+               Password.value = "123456";
+            }  
+               
+            function funcion_Ocultar() {
+                var imagen = document.getElementById("Foto1");
+            
+                imagen.style["display"] = "none";
+
+                var boton_Ocultar = document.getElementById("Ocultar");
+                var boton_Mostrar = document.getElementById("Mostrar");
+
+                boton_Ocultar.style["display"] = "none";
+                boton_Mostrar.style["display"] = "inline";
+                
+
+            }
+
+            function funcion_Mostrar() {
+                var imagen = document.getElementById("Foto1")
+            
+                imagen.style["display"] = "inline";
+
+                var boton_Ocultar = document.getElementById("Ocultar");
+                var boton_Mostrar = document.getElementById("Mostrar");
+
+                boton_Ocultar.style["display"] = "inline";
+                boton_Mostrar.style["display"] = "none";
+
+
+            }
+        </script>
+    </body>
+
+</div>
+
+</html>
