@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <link rel="stylesheet" href="Clase9.css">
+</head>
+<body onoffline="detectar_desconexión()" ononline="detectar_reconexión()">
+    <img id="foto" class="edit" src="https://i.scdn.co/image/75416e947bf832f9181500e2da9ebd5feed53d93">
+   
+    <br>
+
+    <input id="ocultar" class="boton" type="button" value="ocultar" onClick="funcion_ocultar()">
+    <input id="mostrar" class="boton" type="button" value="mostrar" onClick="funcion_mostrar()">
+   
+    <br><br>
+    
+    <form action="">
+           <div>
+               <label class="etiqueta" for="">Nombre</label>
+               <input id="nombre" class="caja" type="text" onchange="detectar_texto()">
+              
+           </div>
+
+           <div>
+               <label class="etiqueta" for="">Correo Electronico</label>
+               <input id="correo" class="caja2" type="text" oninput="correo_detectado()"> 
+           </div>
+
+           <div> 
+               <label class="etiqueta" for="">Contraseña</label>
+               <input id="contra" class="caja3" type="password"> 
+           </div>
+
+           
+           <input class="boton" type="button" value="limpiar" onClick="funcion_limpiar()">
+           <input id="llenar" class="boton" type="button" value="llenar"  onClick="funcion_llenar()">
+       </form>
+
+       <script src="Clase9.js"></script>
+
+</body>
+</html>
