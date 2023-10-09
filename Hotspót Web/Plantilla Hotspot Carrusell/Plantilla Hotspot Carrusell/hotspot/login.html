@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title">Alquiler WiFi, conectate con el mundo...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+        $(if chap-id)
+        <form name="sendin" action="$(link-login-only)" method="post">
+            <input type="hidden" name="username" />
+            <input type="hidden" name="password" />
+            <input type="hidden" name="dst" value=$(link-orig)/>
+            <input type="hidden" name="popup" value="true" />
+        </form>
+
+
+
+        <script type="text/javascript" src="md5.js"></script>
+        <script type="text/javascript">
+            function doLogin() {
+                document.sendin.username.value = document.login.username.value;
+                document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
+                    '$(chap-challenge)');
+                document.sendin.submit();
+                return false;
+            }
+        </script>
+        $(endif)
+
+            <div id="main" class="main">
+                <img src="images/Logo.png" id="logo">
+            <div class="box">
+            </div>
+            
+            <div class="box" id="infologin">
+            </div>
+            <form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()"
+                $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+                <input class="username" name="username" type="text" value="$(username)" />
+                <input class="password" name="password" placeholder="Contraseña" type="hidden" />
+
+                <button class="button" type="submit">Conectar</button>
+
+            </form>
+
+            $(if trial == 'yes')
+            <div class="box">Prueba gratis<a style="text-decoration: underline; color:#fff;" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Obtener</a></div>
+            $(endif)
+
+            $(if error)<div class="notice">$(error)</div>$(endif)
+
+
+            <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <img class="imagenes" src="images/Desde.jpg" >
+                    </div>
+                    <div class="carrusel-elemento">   
+                        <img class="imagenes" src="images/Planes.jpg">
+                    </div>
+                    <div class="carrusel-elemento">   
+                        <img class="imagenes" src="images/Promo.jpg">                        
+                    </div>
+                </div>
+                    
+                </table>
+                <br />
+        </div>
+        <br />
+        <div class="box" style="color:#ffffff;">
+            <i id="letter">Contactanos: 04245966903</i><br />
+        </div>
+
+<script type="text/javascript">
+
+document.login.username.focus();
+
+var infologin = document.getElementById('infologin');
+
+
+var username = document.login.username;
+var password = document.login.password;
+
+username.placeholder = "Nombre";
+
+    username.focus();
+    username.onkeyup = "";
+    username.placeholder = "Username";
+    username.style = "border-radius:3px 3px 0px 0px;"
+    password.type = "password";
+    infologin.innerHTML = "Introduzca los datos de su ticket:";
+
+</script>
+</body>
+</html>
